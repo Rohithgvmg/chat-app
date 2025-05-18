@@ -5,11 +5,11 @@ import { logout, signin, signup } from "../controllers/auth.controllers";
 
 const authRouter=express.Router();
 
-authRouter.get("/signup",signup);
+authRouter.post("/signup",(req,res)=>{signup(req,res)});
 
-authRouter.get("/signin",signin);
+authRouter.post("/signin",signin);
 
-authRouter.get("/logout",logout);
+authRouter.post("/logout",logout);
 
 export default authRouter;
 
